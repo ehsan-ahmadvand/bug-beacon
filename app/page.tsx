@@ -1,7 +1,9 @@
-import Image from "next/image";
+import React from 'react'
 
-export default function Home() {
+const IssuesPage = () => {
   return (
-    <div>Bug Beacon</div>
-  );
+    <div>IssuesPage</div>
+  )
 }
+
+export default IssuesPage
