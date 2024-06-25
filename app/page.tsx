@@ -1,10 +1,5 @@
-import React from 'react'
-import { Button } from '@radix-ui/themes';
-
-const IssuesPage = () => {
+export default function Home() {
   return (
-    <div><Button>New Issue</Button></div>
+    <div>Hello World</div>
   )
 }
-
-export default IssuesPage
