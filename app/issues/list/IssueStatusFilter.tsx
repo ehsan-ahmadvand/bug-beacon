@@ -31,15 +31,18 @@ const IssueStatusFilter = () => {
     >
       <Select.Trigger placeholder="Filter by status..." />
       <Select.Content>
-        {statuses.map((status) => (
-          <Select.Item
-            key={status.value}
-            value={status.value || ''}
-          >
-            {status.label}
-          </Select.Item>
-        ))}
-      </Select.Content>
+  {statuses.map((status) => {
+    const value = status.value && status.value.trim() !== '' ? status.value : 'default-placeholder-value';
+    return (
+      <Select.Item
+        key={value}
+        value={value}
+      >
+        {status.label}
+      </Select.Item>
+    );
+  })}
+</Select.Content>
     </Select.Root>
   );
 };
